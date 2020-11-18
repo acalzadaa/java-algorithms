@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 import lombok.Data;
 
+@SuppressWarnings("serial")
 @Data
 public class BinaryTree<E> implements Serializable {
 
@@ -24,7 +25,7 @@ public class BinaryTree<E> implements Serializable {
 	}
 
 	@Data
-	protected static class Node<E> implements Serializable {
+	public static class Node<E> implements Serializable {
 		protected Node<E> left;
 		protected Node<E> right;
 		protected E data;
